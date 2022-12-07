@@ -1,14 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Nav from './containers/nav';
+import ReactDOM from 'react-dom/client';
+import Admin from './container/admin';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Page1 from './container/page1';
+import Page2 from './container/page2';
+import Page3 from './container/page3';
+
+
+export default function App() {
+ return (
+        <BrowserRouter>
+          <Routes>
+              <Route path='/' element={<Admin/>}/>
+              <Route path='/Saff' element={<Page1/>}/>
+              <Route path='/CRM' element={<Page2/>}/>
+              <Route path='/Saff' element={<Page3/>}/>
+          </Routes>
+        </BrowserRouter>
+  )
+}
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Nav/>
+      <App/>
   </React.StrictMode>
 );
 

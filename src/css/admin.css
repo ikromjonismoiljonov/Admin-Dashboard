@@ -1,0 +1,9 @@
+.divheader{
+    height: 100px;
+    margin-top: 70px;
+}
+.divheader>img{
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+}
